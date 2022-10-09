@@ -1,0 +1,38 @@
+{% extends 'admintemp/admin_dash.html' %}
+{% load static %}
+{% block content %}
+<div class="content-wrapper mt-3  ">
+
+    <a href="{% url 'addpro' %}"><button type="button" class="btn btn-outline-success">ADD PRODUTCS</button></a>
+
+
+    <table class="ml-2 mt-3">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>PRODUCT_NAME</th>
+        <th>QNTY</th>
+        <th>PRICE</th>
+        <th>IMAGE</th>
+        <th>DISCRIPTOIN</th>
+        <th>ACTION</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>IPHONE 14 </td>
+        <td>15</td>
+        <td>79,990</td>
+        <td><img src="" alt=""></td>
+        <td>APPLE iPhone 14 (Midnight, 128 GB)</td>
+        <td><button>delete</button> <button>update</button></td>
+      </tr>
+     
+      </tbody>
+    </table>
+
+
+  </div>
+
+  {% endblock %}
