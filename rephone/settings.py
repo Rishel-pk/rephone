@@ -58,7 +58,7 @@ ROOT_URLCONF = 'rephone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,8 +79,14 @@ WSGI_APPLICATION = 'rephone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rephone',
+        'USER':'postgres',
+        'PASSWORD':'As055055',
+        'PORT':'5432',
+        'HOST':'localhost'
+
+
     }
 }
 
@@ -122,7 +128,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, 'rephone_app/static/'),
-   os.path.join(BASE_DIR, 'rephone_admin/static/')
+   os.path.join(BASE_DIR, 'rephone_admin/static/'),
+   os.path.join(BASE_DIR, 'rephone_seller/static/')
 ]
 
 # Default primary key field type
