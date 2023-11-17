@@ -1,12 +1,12 @@
 from random import random
 from urllib import request
 from django.shortcuts import render, redirect
-from .models import *
+# from .models import *
 from django.core.files.storage import FileSystemStorage
 
 
 def seller_addproduct(request):
-    re = request.session['rephone']
+    add_pro = request.session['rephone']
     if request.method == 'POST':
         product_name = request.POST['product_name']
         category = request.POST['category']
